@@ -53,7 +53,7 @@ python-telegram-bot           == 11.1.0
 pytz                          == 2018.9
 query-string                  == 2019.3.22
 request                       == 2019.3.22
-requests                      == 2.11.1
+requests                      == 2.20.0
 requests-toolbelt             == 0.7.0
 setuptools                    == 39.0.1
 simplejson                    == 3.16.0
