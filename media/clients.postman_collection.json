@@ -1,0 +1,856 @@
+{
+	"info": {
+		"_postman_id": "74a34fb4-4b6f-402f-ad5c-9327f27f0484",
+		"name": "clients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "get me client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjgsImxvZ2luIjoidGVzdCIsInJvbGUiOiJjbGllbnQifQ.gWuR2usoOjvnHjwaD5HHAna1NSYa-RR_-BpkPatZMpY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.ropa.nyc/clients/me",
+							"protocol": "https",
+							"host": [
+								"api",
+								"ropa",
+								"nyc"
+							],
+							"path": [
+								"clients",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clients edit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "",
+									"disabled": true
+								},
+								{
+									"key": "login",
+									"value": "client_test",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9000/clients/upload",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clients registered",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "login",
+									"value": "client",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9000/clients/registered",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"registered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OTksImxvZ2luIjoidGVzdF9pbWFnZV8yNSIsInJvbGUiOiJjbGllbnQifQ.wg6T41XDDnUZMdVjplmcIRt_v6wpOBUK8-qgD-KDj-U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "\"125\"",
+									"type": "text"
+								},
+								{
+									"key": "second",
+									"value": "112",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "third",
+									"value": "32",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "path",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "postProduct",
+									"value": "[{\"product_item\":476,\"coordinates\":\"45.5\"},{\"product_item\":478,\"coordinates\":\"45.5\"}]",
+									"type": "text"
+								},
+								{
+									"key": "postProduct[1][product_item]",
+									"value": "d",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzcsImxvZ2luIjoiY2xpZW50Iiwicm9sZSI6ImNsaWVudCJ9.PdLIHhgUHqDkEbYbvnyGulr7hKheYhD1Irsti8HiR94",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/post/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"post",
+								"13"
+							]
+						},
+						"description": "13-postId"
+					},
+					"response": []
+				},
+				{
+					"name": "get brands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/brands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/clients/brands/item/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzcsImxvZ2luIjoiY2xpZW50Iiwicm9sZSI6ImNsaWVudCJ9.PdLIHhgUHqDkEbYbvnyGulr7hKheYhD1Irsti8HiR94",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/brands/item/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"brands",
+								"item",
+								"2"
+							]
+						},
+						"description": "2-itemId"
+					},
+					"response": []
+				},
+				{
+					"name": "delete posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzcsImxvZ2luIjoiY2xpZW50Iiwicm9sZSI6ImNsaWVudCJ9.PdLIHhgUHqDkEbYbvnyGulr7hKheYhD1Irsti8HiR94",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/post/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"post",
+								"13"
+							]
+						},
+						"description": "13-postId"
+					},
+					"response": []
+				},
+				{
+					"name": "check client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\" : \"login75\"\n}"
+						},
+						"url": {
+							"raw": "http://46.101.179.50:9000/clients/check",
+							"protocol": "http",
+							"host": [
+								"46",
+								"101",
+								"179",
+								"50"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:9000/clients/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get item by brand and categoryId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:9000/clients/item/15/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"item",
+								"15",
+								"1"
+							]
+						},
+						"description": "15 - brandID\n1 - categoryID"
+					},
+					"response": []
+				},
+				{
+					"name": "get current post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/posts/176",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"posts",
+								"176"
+							]
+						},
+						"description": "176-postId"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/clients/me/posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjYsImxvZ2luIjoiKzcxNTQ4MTQxMTI5OSIsInJvbGUiOiJjbGllbnQifQ.ds7cdN6_RWVNs3z5TVNwhFeokXE4k75y0yc1wYxpykQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/me/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"me",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add body proportions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjYsImxvZ2luIjoiKzcxNTQ4MTQxMTI5OSIsInJvbGUiOiJjbGllbnQifQ.ds7cdN6_RWVNs3z5TVNwhFeokXE4k75y0yc1wYxpykQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\"value\": 55,\n\t\"body_proportions_id\" : 1\n\t},\n\t{\n\t\"value\": 20,\n\t\"body_proportions_id\" : 3\n\t},\n\t{\n\t\"value\": 25,\n\t\"body_proportions_id\" : 4\n\t}\n]"
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/body/proportions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"body",
+								"proportions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get body proportions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjYsImxvZ2luIjoiKzcxNTQ4MTQxMTI5OSIsInJvbGUiOiJjbGllbnQifQ.ds7cdN6_RWVNs3z5TVNwhFeokXE4k75y0yc1wYxpykQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/body/proportions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"body",
+								"proportions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjYsImxvZ2luIjoiKzcxNTQ4MTQxMTI5OSIsInJvbGUiOiJjbGllbnQifQ.ds7cdN6_RWVNs3z5TVNwhFeokXE4k75y0yc1wYxpykQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cover",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9000/me/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"me",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create follow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjgsImxvZ2luIjoidGVzdCIsInJvbGUiOiJjbGllbnQifQ.gWuR2usoOjvnHjwaD5HHAna1NSYa-RR_-BpkPatZMpY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/follow/61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"follow",
+								"61"
+							]
+						},
+						"description": "61 - userId"
+					},
+					"response": []
+				},
+				{
+					"name": "delete follow",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjgsImxvZ2luIjoidGVzdCIsInJvbGUiOiJjbGllbnQifQ.gWuR2usoOjvnHjwaD5HHAna1NSYa-RR_-BpkPatZMpY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/unsubscribe/61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"unsubscribe",
+								"61"
+							]
+						},
+						"description": "61 -userId"
+					},
+					"response": []
+				},
+				{
+					"name": "get subscribe by  paginate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjgsImxvZ2luIjoidGVzdCIsInJvbGUiOiJjbGllbnQifQ.gWuR2usoOjvnHjwaD5HHAna1NSYa-RR_-BpkPatZMpY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/me/subscribe/0/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"me",
+								"subscribe",
+								"0",
+								"5"
+							]
+						},
+						"description": "0 - page\n5 -limit"
+					},
+					"response": []
+				},
+				{
+					"name": "get subscribed by  paginate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjgsImxvZ2luIjoidGVzdCIsInJvbGUiOiJjbGllbnQifQ.gWuR2usoOjvnHjwaD5HHAna1NSYa-RR_-BpkPatZMpY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/me/subscribed/0/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"me",
+								"subscribed",
+								"0",
+								"5"
+							]
+						},
+						"description": "0 -page\n5 -limit"
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NjgsImxvZ2luIjoidGVzdCIsInJvbGUiOiJjbGllbnQifQ.gWuR2usoOjvnHjwaD5HHAna1NSYa-RR_-BpkPatZMpY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/user/66",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"user",
+								"66"
+							]
+						},
+						"description": "66 -userId"
+					},
+					"response": []
+				},
+				{
+					"name": "get subscribed user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/subscribed/user/68/0/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"subscribed",
+								"user",
+								"68",
+								"0",
+								"10"
+							]
+						},
+						"description": "68 -userId\n0-page\n10-limit"
+					},
+					"response": []
+				},
+				{
+					"name": "get subscribe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/clients/subscribe/user/61/0/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"clients",
+								"subscribe",
+								"user",
+								"61",
+								"0",
+								"10"
+							]
+						},
+						"description": "61-userId\n0-page\n10-limit"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "d5f162f5-850e-4e42-8104-9f1b1ec1414b",
+		"name": "knex-chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "common",
+			"item": [
+				{
+					"name": "create chat file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "chatFiles",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "chatFiles",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "chat_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "source_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "destination_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/common/files",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"common",
+								"files"
+							]
+						},
+						"description": "destination_id not required field"
+					},
+					"response": []
+				},
+				{
+					"name": "create chat messages",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\":\"messages3\",\n    \"chat_id\":1,      \n    \"source_id\" : 1   ,\n    \"destination_id\" : 3\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/common/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"common",
+								"messages"
+							]
+						},
+						"description": "destination_id not required field"
+					},
+					"response": []
+				},
+				{
+					"name": "get all chats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/common/chats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"common",
+								"chats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create chats",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"chat1\",\n\t\"author_id\" : 1\n}"
+						},
+						"url": {
+							"raw": "localhost:3001/api/common/chats",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"common",
+								"chats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create common user and admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first_name\" : \"Poxos\",\n\t\"last_name\"  :\"Poxosyan\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/common/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"common",
+								"registration"
+							]
+						},
+						"description": "isAdmim key true admin false common"
+					},
+					"response": []
+				},
+				{
+					"name": "get all common user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3001/api/common/index",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"common",
+								"index"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/admin/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all chats information ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/admin/chats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"admin",
+								"chats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
